@@ -1,0 +1,43 @@
+		J2EE(Java 2 Enterprise Edition)
+
+
+	// Objective : - To Develop a Web Application
+		
+       		   - End-2-End Functionality (Application)
+
+	// USE CASE : HDFCBANK.COM, AMAZON.COM, IRCTC.COM,.....
+
+	// TECHNOLOGIES USED IN DEVELOPING THE ABOVE
+
+	# HTML
+	# CSS
+	# JAVASCRIPT		--- CLIENT SIDE APPLICATION
+	# JSP(HTML+JAVA) 		--- TO PRESENT DATA ( server-side technology)
+	# SERVLET    		--- CORE (SEVER SIDE TECHNOLOGY)(DOES THE PROCESSING)
+					--- USED TO WRITE BL(BUSINESS LOGIC)
+					--- USED TO DEVELOP A FRONT CONTROLLER
+	# JDBC      		--- ALLOWS US TO CONNECT TO ANY RDBMS
+					--- SQL DATABASES (CAN BE ANY)
+					--- MySQL --- LIGHTWIEGHT  
+	
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		JDBC(Java Database Connectivity)
+	
+	- It is an API(application programming interface)
+	  java.sql    javax.sql	
+	- It is a mechanism that allows uniform connectivity to any RDBMS
+	- It acts as an mediator between java and other databases
+	- It can perform CRUD Oprations
+
+
+	- SQL QUERIES( SEKEL ):
+
+		- INSERT UPDATE RETRIVAL DELETE	
+	      - DDL
+		- DML ---  INSERT/ UPDATE
+		- DQL	---  SELECT
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

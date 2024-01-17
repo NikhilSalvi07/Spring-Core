@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+		<context:component-scan base-package="com.core.annotation"/>
+		<context:annotation-config/>
+			<context:property-placeholder location="classpath:login.properties"/>
+			
+			
+		<!-- create a bean -->
+		<bean id="hello" class="com.core.HelloWorld"> <!-- HelloWorld hello=new HelloWorld() -->
+		<property name="message" value="welcome to spring"/>
+		</bean>
+		
+			<!-- create a bean -->
+		<bean id="mc" class="com.core.external.MasterCard"/>
+			<bean id="payment" class="com.core.external.Payment">
+			<property name="card" ref="mc"/>
+		</bean>
+		
+		
+		
+			<bean id="per" class="com.core.internal.Person">
+				<property name="perId" value="1"/>
+				<property name="Name" value="Ram"/>
+				<property name="addr">
+					<bean class="com.core.internal.Address">
+						<property name="city" value="pune"/>
+						<property name="state" value="Maharastra"/>
+					</bean>
+				</property>
+			</bean>
+			
+		<bean id="login" class="com.bean.properties.LoginBean">
+			<property name="username" value="${login.username}"/>
+			<property name="password" value="${login.password}"/>
+		
+		</bean>	
+		
+		
+		<bean id="colllist" class="com.core.collection.List.Question">
+			<constructor-arg value="101"></constructor-arg>
+			<constructor-arg value="What is DI?"></constructor-arg>
+			<constructor-arg>
+			<list>
+			<value>The Process of Injected value at Runtime way Setter Injection,Constructor Injection and Autowired in called as DI.</value>
+			</list>
+			</constructor-arg>
+			
+		</bean>
+		
+		<bean id="collmap" class="com.core.collection.map.Question">
+			<constructor-arg value="101"></constructor-arg>
+			<constructor-arg value="What is Hibernate?"></constructor-arg>
+			<constructor-arg>
+			<map>
+			<entry key="It is POJO based" value="Ram"></entry>
+			<entry key="It is based on JDBC" value="Sham"></entry>
+			<entry key="It has own Query Language" value="Ramesh"></entry>
+			</map>
+		</constructor-arg>
+		</bean>
+		
+		<bean id="res" class="com.core.resoure.ResoureInjection">
+			<property name="file" value="JDBC.txt"/> <!-- This txt file or any file store in Spring Notes  -->
+		</bean>
+		
+		
+	</beans>
